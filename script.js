@@ -59,34 +59,34 @@ menuIcon.addEventListener('click', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById("bg-video");
-    const muteButton = document.getElementById("mute-button");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const video = document.getElementById("bg-video");
+//     const muteButton = document.getElementById("mute-button");
 
-    // Add event listeners for each navigation link to mute video upon click
-    const navLinks = document.querySelectorAll(".nav-links a");
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            if (video) video.muted = true;
-        });
-    });
+//     // Add event listeners for each navigation link to mute video upon click
+//     const navLinks = document.querySelectorAll(".nav-links a");
+//     navLinks.forEach(link => {
+//         link.addEventListener("click", () => {
+//             if (video) video.muted = true;
+//         });
+//     });
 
-    // Mute/unmute video with the mute button
-    if (muteButton) {
-        muteButton.addEventListener("click", function() {
-            if (video) video.muted = !video.muted;
-        });
-    }
+//     // Mute/unmute video with the mute button
+//     if (muteButton) {
+//         muteButton.addEventListener("click", function() {
+//             if (video) video.muted = !video.muted;
+//         });
+//     }
     
-    // Unmute video when returning to the top of the page
-    if (video) {
-        window.addEventListener("scroll", function() {
-            if (window.scrollY === 0) {
-                video.muted = false;
-            }
-        });
-    }
-});
+//     // Unmute video when returning to the top of the page
+//     if (video) {
+//         window.addEventListener("scroll", function() {
+//             if (window.scrollY === 0) {
+//                 video.muted = false;
+//             }
+//         });
+//     }
+// });
 
 
 
