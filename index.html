@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mareas a la Deriva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="#top" class="scroll-to-top">
+                    <h1 class="header-title">MAREAS A LA DERIVA</h1> 
+                </a>
+                <p class="subtitle">una película de Camila Rodriguez-Lopez</p> 
+                <nav class="nav-links">
+                    <a id="info-link" href="#info">Info</a>
+                    <a id="gallery-link" href="#gallery">Galería</a> 
+                    <a id="press-link" href="#press">Prensa</a> 
+                    <a id="contact-link" href="#contact">Contacto</a> 
+                    <a id="donate-link" href="#donate">Donar</a> 
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <a href="https://instagram.com/mareasaladeriva" target="_blank" class="instagram-link">
+                    <img src="media/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@mareasaladeriva_" target="_blank" class="tiktok-link">
+                    <img src="media/tiktoklogo.png" alt="TikTok">
+                </a>
+                <img id="mute-button" src="media/mutebutton.png" alt="Mute/Unmute">
+            </div>
+        </div>
+
+        <div id="menu-icon" class="menu-icon" style="display: none;">☰</div>
+
+        <div class="video-background">
+            <video autoplay loop id="bg-video">
+                <source src="media/mareashq.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <div class="content">
+                <h1 id="header-text">.. ESTO ES UN PARAISO<span id="toggle-language" style="cursor: pointer;">*</span><span id="toggle-text" class="toggle-small-text">ENG</span></h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="info" class="info-section">
+        <div class="poster-wall">
+            <div class="poster-text">
+                <p>Cuatro años después de mudarse a Nueva York, la hermana mayor de Maite 
+                    <span id="camelia-muniz" class="highlight-name">(Camelia Muñiz)</span>, Sofía 
+                    <span id="gabriela-saker" class="highlight-name">(Gabriela Saker)</span>, regresa a Puerto Rico para celebrar el cumpleaños de su mamá, Patricia 
+                    <span id="denise-quinones" class="highlight-name">(Denise Quiñones)</span>. 
+                    Maite y su madre se encuentran con una versión nueva de Sofía, lo que genera tensión en la dinámica familiar, y causa que Maite se pregunte cómo cambiaría su vida si decidiera seguir los pasos de su hermana e irse de Puerto Rico. A lo largo de este corto, exploramos el duelo de los corazones que se quedan, el deseo de encajar en un sitio al que ya no perteneces, y el amor hacia Puerto Rico que sentimos desde acá y desde allá. Mareas a la deriva es el cortometraje tesis de la directora 
+                    <span id="camila-rodriguez" class="highlight-name">Camila Rodríguez López</span> y productores 
+                    <span id="jack-nunez" class="highlight-name">Jack Núñez</span> y 
+                    <span id="alex-sosa" class="highlight-name">Alexandra Sosa</span>. 
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup box -->
+    <div id="popup" class="popup">
+        <img id="popup-image" src="" alt="Popup Image">
+        <p id="popup-text"></p>
+    </div>
+    
+    <div id="gallery" class="gallery-section">
+        <div class="upper-third">
+            <div class="slideshow-container">
+                <div class="slideshow-track">
+                    <img src="media/DSC02403.jpg" alt="Image 1" class="gallery-image" data-caption="DP and Director discuss blocking.">
+                    <img src="media/DSC02411.jpg" alt="Image 2" class="gallery-image" data-caption="PD resets the bar for next take.">
+                    <img src="media/DSC02430.jpg" alt="Image 3" class="gallery-image" data-caption="Producer Jack stands in for lighting.">
+                    <img src="media/DSC02460 (1).jpg" alt="Image 4" class="gallery-image" data-caption="PA and Gabriela run lines.">
+                    <img src="media/DSC02475.jpg" alt="Image 5" class="gallery-image" data-caption="Camera team figuring out next setup.">
+                    <img src="media/DSC02485.jpg" alt="Image 6" class="gallery-image" data-caption="AD and Camelia discuss the schedule.">
+                    <img src="media/DSC02498 (1).jpg" alt="Image 7" class="gallery-image" data-caption="Sound sets up.">
+                    <img src="media/DSC02525.jpg" alt="Image 8" class="gallery-image" data-caption="2 AC fills in the slate for the first time.">
+                    <img src="media/DSC02588.jpg" alt="Image 9" class="gallery-image" data-caption="2 AC and Camila waiting for talent.">
+                    <img src="media/DSC02656.jpg" alt="Image 10" class="gallery-image" data-caption="Extras for bar scene!">
+                    <img src="media/DSC02663 (1).jpg" alt="Image 11" class="gallery-image" data-caption="Behind the scenes of day for night.">
+                    <img src="media/DSC02709.jpg" alt="Image 12" class="gallery-image" data-caption="Wrapping the camera for spraycan scene.">
+                </div>
+            </div>
+        </div>
+        <div class="lower-two-thirds">
+            <div class="highlighted-image">
+                <img src="image1.jpg" alt="Highlighted Image" id="highlighted">
+            </div>
+            <div class="caption">
+                <p id="image-caption">Caption for Image 1</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="press" class="press-section">
+        <img src="media/fancystraight.png" alt="Fancy Straight" class="fancy-img">
+        <div class="links-container">
+            <p>"A lo largo de este cortometraje, exploramos el duelo de los corazones que se quedan, el deseo de encajar </br> en un sitio al que ya no perteneces y el amor hacia Puerto Rico que sentimos desde acá y desde allá."</p>
+            <a href="https://claridadpuertorico.com/estudiante-de-la-universidad-de-nueva-york-rodara-cortometraje-en-puerto-rico/?fbclid=PAZXh0bgNhZW0CMTEAAaYVhd1hpM58zM-nqXjwD2Nz_HydNiISqGuI0LnX1jPUi6qhu7yw-d85JZE_aem_-q6T8tApv2wemJSR1v70ow" class="press-link">CLARIDAD</a>
+            <p>"Gabriela Saker encaminada a expandir la presencia y multiplicar las historias de mujeres hispanas"</p>
+            <a href="https://www.elnuevodia.com/entretenimiento/cultura/notas/gabriela-saker-encaminada-a-expandir-la-presencia-y-multiplicar-las-historias-de-mujeres-hispanas/?fbclid=PAZXh0bgNhZW0CMTEAAab94uy9Mv6xjK9dHxBZexfysBHwhwlqUUaE8n6agm59AuBRaalf0QT0Vqk_aem_Swn-_WFWAzwTxA69R9EQoA" class="press-link">EL NUEVO DIA</a>
+            <p>"Conversando Camila Rodríguez López, guionista y directora de Mareas a la Deriva, un cortometraje sobre </br> el impacto de la migración en la juventud puertorriqueña. La acompañará la actriz Camelia Muñiz, protagonista del filme."</p>
+            <a href="https://www.facebook.com/story.php/?story_fbid=942063087926732&id=100063691472648&_rdr" class="press-link">WKAQ 580</a>
+        </div>
+        <img src="media/greenseal.png" alt="Green Seal" class="seal-img">
+    </div>
+    
+    <div id="contact" class="contact-section">
+        <h2 class="contact-text">¡Nos encantaría saber de ti!</h2>
+        <h1 class="contact-link">
+            <a href="#contact" onclick="copyEmailToClipboard()">CHARLEMOS</a>
+        </h1>
+    </div>
+    
+    <div id="donate" class="donate-section">
+        <h2 class="support-text">
+            <a href="https://fundraising.fracturedatlas.org/mareas-a-la-deriva-short-film/campaigns/6185">APOYA EL PROYECTO AQUí</a>
+        </h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
