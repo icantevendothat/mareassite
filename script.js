@@ -88,7 +88,20 @@ menuIcon.addEventListener('click', () => {
 //     }
 // });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById("bg-video");
+    const muteButton = document.getElementById("mute-button");
 
+    // Mute/unmute video with the mute button
+    if (muteButton && video) {
+        muteButton.addEventListener("click", function() {
+            video.muted = !video.muted;
+
+            // Update the button's text or appearance
+            muteButton.textContent = video.muted ? "Unmute" : "Mute";
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const names = document.querySelectorAll(".highlight-name");
