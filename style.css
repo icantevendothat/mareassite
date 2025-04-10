@@ -21,11 +21,11 @@ html, body {
 
 
 body::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
+    display: none; 
 }
 
 .content-wrapper {
-    height: 100vh; /* Ensure content fills the viewport height */
+    height: 100vh; 
     position: relative;
     overflow: hidden;
 }
@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire area */
+    object-fit: cover; 
     transform: translate(-50%, -50%);
     z-index: -1;
 }
@@ -211,23 +211,10 @@ body::-webkit-scrollbar {
     color: paleturquoise;
 }
 
-.section {
-    height: 100vh; /* Each section fills the viewport */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: #333; /* Background color for sections */
-    font-family: 'NotoSerif', Arial, sans-serif;
-    font-size: 2em;
-}
-
 .info-section {
-    height: 100vh;
-    display: flex;
-    background-image: url('media/wall.png');
+    height: 600vh;
+    background-image: url('media/bg.webp');
     background-size: cover; 
-    background-position: center; 
     background-repeat: no-repeat;
     padding: 20px; 
 }
@@ -238,7 +225,6 @@ body::-webkit-scrollbar {
     max-width: 1100px; 
     margin: 0 auto;
 }
-
 
 #poster-image {
     max-width: 80%; 
@@ -254,7 +240,6 @@ body::-webkit-scrollbar {
     transform: translate(-135px, 175px);
     width: 90%;  
     height: 30%;
-    display: flex;
     align-items: center;
     color: whitesmoke;
     font-family: 'NotoSerif';
@@ -269,11 +254,11 @@ body::-webkit-scrollbar {
     text-decoration: underline;
     transition: color 0.3s;
 }
+
 .highlight-name:hover {
     color: blue;
 }
 
-/* Popup box styling */
 .popup {
     display: none;
     position: absolute;
@@ -287,6 +272,11 @@ body::-webkit-scrollbar {
     background-size: cover;
     z-index: 1000;
     text-align: center;
+}
+
+#popup-text {
+    color: grey;
+    font-family: 'NotoSerif'; 
 }
 
 .popup img {
@@ -303,49 +293,39 @@ body::-webkit-scrollbar {
 }
 
 .gallery-section {
-    height: 100vh;
     display: flex;
-    background-image: url('media/gallery.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
     padding: 20px; 
-}
-
-.gallery-section {
-    display: flex;
     flex-direction: column;
-    height: 100vh; /* Full viewport height */
+    margin-top: 120vh;
 }
 
 .gallery-image {
-    max-width: 5%; /* Adjust size as needed */
-    max-height: 5%; /* Maintain aspect ratio */
-    margin: 0 10px; /* Add horizontal spacing between images */
-    padding: 5px; /* Optional padding inside image container */
+    max-width: 5%; 
+    max-height: 5%; 
+    margin: 0 10px;
+    padding: 5px; 
 }
 
 .upper-third {
-    height: 33%; /* Upper third */
-    overflow: hidden; /* Hide the overflow */
+    height: 33%; 
+    overflow: hidden; 
     position: relative;
 }
 
 .slideshow-container {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Hide images that slide out of view */
+    overflow: hidden; 
     margin-top: 50px;
 }
 
 .slideshow-track {
     display: flex;
-    width: calc(16.66% * 18); /* 12 original images + 6 clones */
     transition: transform 1s ease-in-out;
 }
 
 .slideshow-track img {
-    width: 16.66%; /* 100% / 6 images */
+    width: 16.66%; 
     height: 100%;
     object-fit: cover;
 }
@@ -370,23 +350,23 @@ body::-webkit-scrollbar {
 }
 
 .caption {
-    flex: 1; /* Space for the caption */
+    flex: 1; 
     display: flex;
     justify-content: left;
-    align-items: top;
+    align-items: last baseline;
     font-size: 2em;
-    padding: 10px;
-    color: white;
+    padding: 20px;
     text-align: left;
+}
+
+#image-caption {
+    color: white;
+    font-family: 'NotoSerif';
 }
 
 .press-section {
     height: 100vh;
     display: flex;
-    background-image: url('media/press.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
     padding: 20px; 
     position: relative;
     display: flex;
@@ -438,11 +418,7 @@ body::-webkit-scrollbar {
 
 
 .contact-section {
-    height: 100vh;
-    background-image: url('media/contact.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    height: 150vh;
     padding: 20px; 
 }
 
@@ -452,38 +428,34 @@ body::-webkit-scrollbar {
     color: white;
     font-family: 'NotoSerif'; 
     justify-content: center;
-    font-size: 3em; /* Adjust font size as needed */
+    font-size: 3em; 
     margin: 0;
-    padding-top: 10%; 
+    padding-top: 40%; 
 }
 
 .contact-link {
     display: flex;
     align-items: center;
     color: white;
-    font-family: 'NotoSerif'; /* Use the inherited font */
+    font-family: 'NotoSerif'; 
     justify-content: center;
-    font-size: 4em; /* Adjust font size as needed */
+    font-size: 4em; 
     text-decoration: underline;
     margin: 0;
 }
 
 .donate-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+    height: 120vh;
     align-items: flex-start; 
     padding-top: 20%; 
-    background-image: url('media/roof.png');
-    background-size: cover; 
-    background-repeat: no-repeat;
     color: white; 
 }
 
 .support-text {
-    font-family: 'NotoSerif'; /* Use the inherited font */
+    padding-top: 70px;
+    font-family: 'NotoSerif'; 
     text-align: center;
-    font-size: 4em; /* Adjust font size as needed */
+    font-size: 4em;
     text-decoration: underline;
     margin: 0;
 }
@@ -496,14 +468,13 @@ body::-webkit-scrollbar {
     color: blue;     
 }
 
-/* Media query for vertical devices or screens smaller than 768px */
-@media only screen and (max-width: 600px), (orientation: portrait) {
+
+@media only screen and (max-width: 480px), (orientation: portrait) {
     .header-title {
         font-size: 2em;
         position: fixed;
         top: 10px;
         left: 10px;
-        transform: scale(0.6, 1.4); 
         transform-origin: top left;
     }
 
@@ -538,14 +509,170 @@ body::-webkit-scrollbar {
         animation: scrollText 30s linear infinite;
     }
 
+    .logline {
+        font-size: 0.9em;
+        align-items: center;
+    }
 
-/* Keyframes for scrolling text */
-@keyframes scrollText {
-    from {
-        transform: translateX(100%);
+    .poster-text {
+        font-size: 1em;
+        padding: 10px;
+        width: 110%;
+        transform: translate(-10px, 225px);
+        border-radius: 5px;
     }
-    to {
-        transform: translateX(-700%);
+
+    .popup-container {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 5;
     }
-}
+
+    .popup {
+        position: absolute;
+        width: 90%; 
+        max-width: 300px;
+        padding: 15px;
+        background: url('media/posta.png') no-repeat center center;
+        background-size: cover;
+        transform: translate(-20%, 240%);
+        z-index: 5;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .popup .close-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 1.2em;
+        color: white;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #popup-text {
+        font-size: 0.8em;
+    }
+
+    .popup img {
+        max-width: 70%;
+        max-height: 30%;
+        margin-bottom: 10px;
+    }
+
+    .popup p {
+        font-size: 0.7rem;
+    }
+
+    .upper-third {
+        z-index: 6;
+    }
+
+    .gallery-section {
+        padding: 10px;
+        margin-top: 120vh;
+        z-index: 6;
+    }
+
+    .gallery-image {
+        max-width: 20%;
+        margin: 0 2px;
+        padding: 1px;
+    }
+
+    .slideshow-container {
+        margin-top: 5px;
+        z-index: 6 !important;
+    }
+
+    .slideshow-track img {
+        height: 80px;
+        margin-right: 2px;
+        z-index: 6;
+    }
+
+    .highlighted-image img {
+        max-width: 95%;
+        max-height: 200px;
+    }
+
+    .caption {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .press-section {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    .fancy-img {
+        width: 100%;
+        align-items: center;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .seal-img {
+        width: 60%;
+        max-width: 120px;
+        padding: 5px;
+        margin-bottom: 100px;
+    }
+
+    .links-container {
+        gap: 10px;
+    }
+
+    .links-container p {
+        font-size: 0.8rem;
+    }
+
+    .press-link {
+        font-size: 1.2rem;
+    }
+
+    .contact-section {
+        padding-top: 120vh;
+    }
+
+    .contact-text {
+        font-size: 1.4em;
+        padding-top: 20%;
+    }
+
+    .contact-link {
+        font-size: 1.8em;
+        margin: 5px 0;
+    }
+
+    .donate-section {
+        padding-top: 15%;
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .support-text {
+        font-size: 1.6em;
+    }    
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-700%);
+        }
+    }
 }
