@@ -2,27 +2,25 @@ const header = document.querySelector('.header');
 const menuIcon = document.getElementById('menu-icon');
 let headerVisible = true;
 
-// Detect scroll position to toggle header visibility
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {  // Adjust scroll threshold as needed
+    if (window.scrollY > 100) { 
         if (headerVisible) {
-            header.classList.add('hidden'); // Hide header
-            menuIcon.style.display = 'block'; // Show menu icon
+            header.classList.add('hidden');
+            menuIcon.style.display = 'block'; 
             headerVisible = false;
         }
     } else {
         if (!headerVisible) {
-            header.classList.remove('hidden'); // Show header
-            menuIcon.style.display = 'none'; // Hide menu icon
+            header.classList.remove('hidden'); 
+            menuIcon.style.display = 'none';
             headerVisible = true;
         }
     }
 });
 
-// Toggle header visibility when the menu icon is clicked
 menuIcon.addEventListener('click', () => {
-    header.classList.remove('hidden'); // Show header
-    menuIcon.style.display = 'none'; // Hide menu icon
+    header.classList.remove('hidden');
+    menuIcon.style.display = 'none'; 
     headerVisible = true;
 });
 
@@ -31,12 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("bg-video");
     const muteButton = document.getElementById("mute-button");
 
-    // Mute/unmute video with the mute button
     if (muteButton && video) {
         muteButton.addEventListener("click", function() {
             video.muted = !video.muted;
 
-            // Update the button's text or appearance
             muteButton.textContent = video.muted ? "Unmute" : "Mute";
         });
     }
@@ -80,10 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Show popup when clicking a name
     names.forEach(name => {
         name.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent triggering the global click handler
+            e.stopPropagation();
             const id = name.id;
             if (data[id]) {
                 popupImage.src = data[id].image;
@@ -93,14 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Hide popup when clicking outside of it
     document.addEventListener("click", (e) => {
         if (!popup.contains(e.target) && !e.target.classList.contains("highlight-name")) {
             popup.style.display = "none";
         }
     });
 
-    // Prevent popup from closing if clicking inside it
     popup.addEventListener("click", (e) => {
         e.stopPropagation();
     });
@@ -113,41 +106,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageCaption = document.getElementById("image-caption");
 
     const imageCount = images.length;
-    let index = 0; // Index for the current slide
+    let index = 0; 
 
-    // Clone images for a seamless looping effect
     for (let i = 0; i < imageCount; i++) {
         const clone = images[i].cloneNode(true);
         slideshowTrack.appendChild(clone);
     }
 
-    const imageWidth = images[0].clientWidth; // Width of a single image
+    const imageWidth = images[0].clientWidth;
 
-    // Function to update the carousel
     function updateCarousel() {
-        // Transition to the next position
         slideshowTrack.style.transition = "transform 1s ease-in-out";
         slideshowTrack.style.transform = `translateX(-${index * imageWidth}px)`;
 
-        // Update highlighted image and caption
         const currentImage = images[index % imageCount];
         highlightedImage.src = currentImage.src;
         imageCaption.textContent = currentImage.dataset.caption;
 
         index++;
 
-        // Reset position to create an infinite loop
         if (index === imageCount) {
             setTimeout(() => {
-                slideshowTrack.style.transition = "none"; // Disable transition
-                slideshowTrack.style.transform = `translateX(0px)`; // Reset position
+                slideshowTrack.style.transition = "none";
+                slideshowTrack.style.transform = `translateX(0px)`; 
                 index = 0;
-            }, 1000); // Match transition duration
+            }, 1000); 
         }
     }
 
-    // Start the carousel
-    setInterval(updateCarousel, 4000); // Slide every 4 seconds
+    setInterval(updateCarousel, 4000); 
 });
 
 
