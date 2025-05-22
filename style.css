@@ -454,6 +454,30 @@ body::-webkit-scrollbar {
     color: white; 
 }
 
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-grid img {
+    margin-top: 20vh;
+    max-width: 100%;
+    height: 150px; /* Uniform height removes uneven gaps */
+    object-fit: contain;
+}
+
+.site-credit {
+    margin-top: 15vh;
+    font-size: 0.8rem;
+    text-align: right;
+    font-family: 'NotoSerif';
+}
+
 .support-text {
     padding-top: 70px;
     font-family: 'NotoSerif'; 
@@ -463,11 +487,11 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 
-.contact-link a, .support-text a {
+.contact-link a, .support-text a .site-credit a{
     color: white;  
 }
 
-.contact-link a:hover, .support-text a:hover {
+.contact-link a:hover, .support-text a:hover .site-credit a:hover{
     color: blue;     
 }
 
